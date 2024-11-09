@@ -1,0 +1,34 @@
+GET http://localhost:3000/api/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MmU5NzgyOTIwZDVhNzEzYzFiZjE3MiIsImVtYWlsIjoidmxhZGltaXJAdGVzdC5jb20iLCJpYXQiOjE3MzExMTE5ODUsImV4cCI6MTczMTE5ODM4NX0.AK1Kds8qHpBibx8lUISipnEBBgrxzlKIZcBZy0VPVbI
+###
+
+POST http://localhost:3000/api/tasks
+content-type: application/json
+
+{
+  "title": "Task 1",
+  "description": "Description 1",
+  "status": "pending",
+  "date": "2021-12-31T23:59:59.999Z"
+}
+
+###
+
+GET http://localhost:3000/api/tasks/672d04ad21e0f57f539d85f9
+
+###
+
+PUT http://localhost:3000/api/tasks/672d04ad21e0f57f539d85f9
+content-type: application/json
+
+{
+  "title": "Go to the gym",
+  "description": "Go to the gym at 6:00 PM",
+  "status": "PENDING",
+  "date": "2021-12-31T23:59:59.999Z"
+}
+
+
+###
+
+DELETE http://localhost:3000/api/tasks/672d12932488b7691fdcb9ae
