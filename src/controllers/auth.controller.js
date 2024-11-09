@@ -24,6 +24,9 @@ class AuthController {
 
       return res.status(200).json({ token: session.token })
     } catch (error) {
+      if (error.message === 'Invalid credentials') {
+        return res.status(401).json({ error: error.message })
+      }
       res.status(400).json({ error: error.message })
     }
   }
