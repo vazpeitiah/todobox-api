@@ -4,7 +4,6 @@ const taskService = new TaskService()
 class TaskController {
   async create(req, res) {
     try {
-      console.log({ req: req.params })
       const user = await taskService.create(req.body)
       return res.status(201).json(user)
     } catch (error) {

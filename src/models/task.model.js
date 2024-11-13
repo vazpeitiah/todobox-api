@@ -5,7 +5,10 @@ const taskSchema = new Schema(
     title: { type: String, required: true },
     description: String,
     date: Date,
-    status: String
+    status: String,
+    start: Date,
+    end: Date,
+    comments: String
   },
   { timestamps: true, toJSON: { virtuals: true }, toObject: { virtuals: true } }
 )
